@@ -16,7 +16,7 @@ const HeroStat = ({ value, label }) => (
 );
 
 const FeatureCard = ({ icon, title, description }) => (
-  <div className="bg-[#111115] p-6 rounded-lg border border-gray-800">
+  <div className="bg-[#111115] p-6 rounded-lg border border-gray-800 transition-all duration-300 ease-in-out hover:border-transparent hover:shadow-sm hover:shadow-blue-400/30">
     <div className="flex items-center justify-center w-12 h-12 bg-purple-900/50 rounded-lg mb-4 border border-purple-700">
       {icon}
     </div>
@@ -26,7 +26,7 @@ const FeatureCard = ({ icon, title, description }) => (
 );
 
 const StatCard = ({ value, label }) => (
-  <div className="text-center bg-[#111115] p-8 rounded-lg border border-gray-800">
+  <div className="text-center bg-[#111115] p-8 rounded-lg border border-gray-800 transition-all duration-300 ease-in-out hover:border-transparent hover:shadow-sm hover:shadow-blue-400/30">
     <h3 className="text-4xl md:text-5xl font-bold text-purple-400">{value}</h3>
     <p className="text-gray-400 mt-2">{label}</p>
   </div>
@@ -66,11 +66,11 @@ export default function HomePage() {
               <div className="bg-green-600 w-1.5 h-1.5 rounded-full animate-[pulse-green_2s_infinite]"></div>
               AI-Powered Development
             </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               Build faster with{" "}
               <span className="text-purple-400">Artificial Intelligence</span>
             </h1>
-            <p className="text-lg text-gray-400 max-w-xl mx-auto md:mx-0 mb-8">
+            <p className="text-base text-gray-400 max-w-xl mx-auto md:mx-0 mb-8">
               Our AI-powered development environment helps you write code, debug
               issues, and deploy your applications at lightspeed.
             </p>
@@ -82,13 +82,13 @@ export default function HomePage() {
                 View Demo
               </button>
             </div>
-            <div className="flex justify-center md:justify-start gap-8 mt-12">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start sm:gap-8 gap-4 mt-12">
               <HeroStat value="500K+" label="Active Users" />
               <HeroStat value="25.0M+" label="Lines of Code" />
               <HeroStat value="99.9%" label="Uptime" />
             </div>
           </div>
-          <div>
+          <div className="w-full overflow-hidden">
             <CodeMockup
               lines={[
                 `<span class="text-blue-400">import</span> { <span class="text-orange-400">createApi</span> } <span class="text-blue-400">from</span> <span class="text-yellow-400">'@coderia/ai'</span>;`,
@@ -108,8 +108,8 @@ export default function HomePage() {
 
         <section className="mb-24 md:mb-32">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold">Built for modern development</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto mt-4">
+            <h2 className="text-3xl md:text-4xl font-bold">Built for modern development</h2>
+            <p className="text-base text-gray-400 max-w-2xl mx-auto mt-4">
               Every feature is designed to improve your development workflow
               with simplicity and performance.
             </p>
@@ -148,7 +148,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-24 md:mb-32">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-24 md:mb-32">
           <StatCard value="40K" label="Projects Created" />
           <StatCard value="2.0M" label="Deployments" />
           <StatCard value="12K" label="Companies" />
@@ -156,10 +156,10 @@ export default function HomePage() {
         </section>
 
         <section className="text-center">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to build something amazing?
           </h2>
-          <p className="text-lg text-gray-400 max-w-xl mx-auto mb-8">
+          <p className="text-base text-gray-400 max-w-xl mx-auto mb-8">
             Join thousands of developers and start building your next great idea
             on Coderia today.
           </p>
